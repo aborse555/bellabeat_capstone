@@ -15,7 +15,7 @@ try:
     back_from_function = get_ssn_info(ssn_choice)
     streamlit.dataframe(back_from_function)      
 
-streamlit.header("View Your Basic Information")
+#streamlit.header("View Your Basic Information")
 # Snowflake related functions
 def get_basic_info():
   with my_cnx.cursor(ssn_choice) as my_cur:
