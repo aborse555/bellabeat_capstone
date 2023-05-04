@@ -1,6 +1,3 @@
-# don't run anything from this line while troubleshooting
-streamlit.stop()
-
 import streamlit
 import pandas
 import requests
@@ -37,3 +34,6 @@ streamlit.header('Medicare Information')
 streamlit.header('Member Group Summary')
 streamlit.header('Direct Pay History')
 streamlit.header('Direct Premium Status')
+
+# don't run anything from this line while troubleshooting
+streamlit.stop()
