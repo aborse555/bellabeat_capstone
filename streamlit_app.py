@@ -17,7 +17,7 @@ if streamlit.button('Get Basic Information'):
   my_cnx.close()
   streamlit.dataframe(my_data_rows)
 
- except URLError as e:
+except URLError as e:
   streamlit.error()
   
 streamlit.header("Enter SSN Here with No Dashes")
