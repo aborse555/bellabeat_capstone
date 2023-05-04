@@ -17,18 +17,17 @@ if streamlit.button('Get Basic Information'):
   my_cnx.close()
   streamlit.dataframe(my_data_rows)
 
-except URLError as e: 
-  streamlit.error()
-  
 streamlit.header("Enter SSN Here with No Dashes")
 try:
   ssn_choice = streamlit.text_input('What is your SSN?')
   if not ssn_choice:
     streamlit.error("Please enter a SSN to get information.")
   else:
-    back_from_function = get_ssn_infor(ssn_choice)
+    back_from_function = get_ssn_info(ssn_choice)
     streamlit.dataframe(back_from_function)
 
+except URLError as e: 
+  streamlit.error()
 
 # streamlit.header('Comments')
 # streamlit.header('Dependents')
