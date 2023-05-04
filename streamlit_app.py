@@ -6,6 +6,11 @@ from urllib.error import URLError
 
 streamlit.title('SHPM')
 
+def get_basic_info():
+  with my_cnx.cursor(ssn_choice) as my_cur:
+    my_cur.execute("select * from TMEM where SSN = ('" + ssn_choice + "')")
+    return my_cur.fetchall()
+
 streamlit.header("Enter SSN Here with No Dashes")
 try:
   ssn_choice = streamlit.text_input('What is your SSN?')
