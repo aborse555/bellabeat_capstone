@@ -20,6 +20,9 @@ try:
     back_from_function = get_ssn_info(ssn_choice)
     streamlit.dataframe(back_from_function)      
 
+except URLError as e:
+  streamlit.error()    
+
 #streamlit.header("View Your Basic Information")
 # Snowflake related functions
 #def get_basic_info():
