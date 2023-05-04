@@ -9,7 +9,7 @@ streamlit.title('SHPM')
 def get_ssn_info(ssn_choice):
   with my_cnx.cursor() as my_cur:
        my_cur.execute("select * from TMEM where SSN = ('" + ssn_choice + "')")
-       return my_cur.fetchall()
+       return transpose(my_cur.fetchall())
   
 my_ssn = streamlit.text_input('What is your SSN?')
 if streamlit.button('Enter Your SSN'):
