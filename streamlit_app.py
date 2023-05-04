@@ -2,7 +2,7 @@ import streamlit
 import pandas
 import requests
 import snowflake.connector
-# from urllib.error import URLError
+from urllib.error import URLError
 
 streamlit.title('SHPM')
 streamlit.header('Basic Information')
@@ -17,6 +17,9 @@ if streamlit.button('Get Basic Information'):
   my_cnx.close()
   streamlit.dataframe(my_data_rows)
 
+ except URLError as e:
+  streamlit.error()
+  
 streamlit.header("Enter SSN Here with No Dashes")
 try:
   ssn_choice = streamlit.text_input('What is your SSN?')
