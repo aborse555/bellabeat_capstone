@@ -13,8 +13,7 @@ try:
     streamlit.error("Please enter a SSN to get information.")
   else:
     back_from_function = get_ssn_info(ssn_choice)
-    streamlit.dataframe(back_from_function)
-
+    streamlit.dataframe(back_from_function)      
 def get_ssn_info():
   with my_cnx.cursor() as my_cur:
        my_cur.execute("select * from TMEM where SSN = ('" + ssn_choice + "')")
