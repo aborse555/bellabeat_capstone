@@ -8,11 +8,11 @@ streamlit.title('SHPM')
 
 def get_ssn_info(ssn_choice):
   with my_cnx.cursor() as my_cur:
-       transpose(my_cur.execute("select * from TMEM where SSN = ('" + ssn_choice + "')"))
+       my_cur.execute("select * from TMEM where SSN = ('" + ssn_choice + "')")
        return my_cur.fetchall()
   
 my_ssn = streamlit.text_input('What is your SSN?')
-if streamlit.button('Enter Your SSN'):
+if streamlit.button('Get Basic Information'):
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   back_from_function = get_ssn_info(my_ssn)
   streamlit.text(back_from_function)
