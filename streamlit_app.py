@@ -5,9 +5,17 @@ import snowflake.connector
 from urllib.error import URLError
 
 streamlit.title('SHPM')
-streamlit.header('Basic Inormation')
 
-streamlit.header("View Our Fruit List - Add Your Favorites!")
+streamlit.header("Enter SSN Here with No Dashes")
+try:
+  ssn_choice = streamlit.text_input('What is your SSN?')
+  if not ssn_choice:
+    streamlit.error("Please enter a SSN to get information.")
+  else:
+    back_from_function = get_ssn_info(ssn_choice)
+    streamlit.dataframe(back_from_function)      
+
+streamlit.header("View Your Basic Information")
 # Snowflake related functions
 def get_basic_info():
   with my_cnx.cursor(ssn_choice) as my_cur:
