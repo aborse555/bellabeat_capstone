@@ -5,7 +5,7 @@ import snowflake.connector
 # from urllib.error import URLError
 
 streamlit.title('SHPM')
-
+streamlit.header('Basic Information')
 def get_ssn_infor():
   with my_cnx.cursor() as my_cur:
        my_cur.execute("select * from TMEM where SSN = ('" + ssn_choice + "')")
@@ -26,14 +26,14 @@ try:
     back_from_function = get_ssn_infor(ssn_choice)
     streamlit.dataframe(back_from_function)
 
-streamlit.header('Basic Information')
-streamlit.header('Comments')
-streamlit.header('Dependents')
-streamlit.header('Coverage History')
-streamlit.header('Medicare Information')
-streamlit.header('Member Group Summary')
-streamlit.header('Direct Pay History')
-streamlit.header('Direct Premium Status')
+
+# streamlit.header('Comments')
+# streamlit.header('Dependents')
+# streamlit.header('Coverage History')
+# streamlit.header('Medicare Information')
+# streamlit.header('Member Group Summary')
+# streamlit.header('Direct Pay History')
+# streamlit.header('Direct Premium Status')
 
 # don't run anything from this line while troubleshooting
 streamlit.stop()
