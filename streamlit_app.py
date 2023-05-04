@@ -36,4 +36,4 @@ try:
 # streamlit.header('Direct Premium Status')
 
 # don't run anything from this line while troubleshooting
-streamlit.stop()
+# streamlit.stop()
