@@ -79,3 +79,5 @@ try:
 # streamlit.header('Member Group Summary')
 # streamlit.header('Direct Pay History')
 # streamlit.header('Direct Premium Status')
+
+streamlit.stop()
