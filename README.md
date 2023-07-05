@@ -62,6 +62,6 @@ We can advertise this product as a product to track how many steps you take, sta
 4. Ensure your work is accessible.
 
 - Total Daily Average Activity: Pie Chart to effectively show how sedentary our lifestyle is
-  
+
 - Total Steps vs Calories Burnt: Plot to show the correlation between walking and burning calories
   
