@@ -62,6 +62,7 @@ We can advertise this product as a product to track how many steps you take, sta
 4. Ensure your work is accessible.
 
 - Total Daily Average Activity: Pie Chart to effectively show how sedentary our lifestyle is
-
+![total_activity](https://github.com/aborse555/bellabeat_capstone/assets/116681133/5bddd18d-2303-4759-9c90-16ed103a3ec0)
 - Total Steps vs Calories Burnt: Plot to show the correlation between walking and burning calories
-  
+![steps_calories](https://github.com/aborse555/bellabeat_capstone/assets/116681133/dc7ae8d9-6219-49ff-bf8d-c7a2cbb3c647)
+
