@@ -62,7 +62,7 @@ Data is from a survey so it may be skewed/biased and not every table has informa
 - Total Daily Average Activity: Pie Chart to effectively show how sedentary our lifestyle is
 ![total_activity](graphs/total_activity.JPG)
 - Total Steps vs Calories Burnt: Plot to show the correlation between walking and burning calories
-![steps_calories](https://github.com/aborse555/bellabeat_capstone/assets/116681133/dc7ae8d9-6219-49ff-bf8d-c7a2cbb3c647)
+![steps_calories](graphs/total_steps_calories_burnt.JPG)
 
 # Act
 1. **What is your final conclusion based on your analysis?**
